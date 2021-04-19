@@ -33,6 +33,11 @@ public class Top10ventana extends JDialog{
 		}
 		b = new JList(puntajes);
 		b.setSelectedIndex(2);
+		
+		b.setForeground(Color.DARK_GRAY);
+		b.setBackground(Color.MAGENTA);
+		b.setSelectionBackground(Color.GRAY);
+		b.setSelectionForeground(Color.CYAN);
 		JDialog v = new JDialog();
 		v.setTitle("Top-10");
 		v.setSize(70,240);
