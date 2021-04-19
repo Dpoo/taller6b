@@ -10,7 +10,6 @@ import java.awt.geom.RoundRectangle2D;
 
 
 public class PanelTablero extends JPanel implements MouseListener {
-    private Rectangle[][] Rectangulos;
     private VentanaJuego ventana;
     private int[][] cantidades;
     private int largo;
@@ -25,6 +24,7 @@ public class PanelTablero extends JPanel implements MouseListener {
 
         Tablero tablero = ventana.getTablero();
         nuevoPanel(tablero);
+        this.addMouseListener(this);
     }
 
     public void nuevoPanel(Tablero tablero){
@@ -33,7 +33,6 @@ public class PanelTablero extends JPanel implements MouseListener {
         boolean[][] tableroB = tablero.darTablero();
         int largo = tableroB.length;
         this.cantidades = new int[largo][largo];
-        this.Rectangulos =  new Rectangle[largo][largo];
         GridLayout gl = new GridLayout(largo,largo);
         setLayout(gl);
         actulizarPanel(tablero);
@@ -42,28 +41,24 @@ public class PanelTablero extends JPanel implements MouseListener {
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
-        int disx = this.getX();
-        int disy = this.getY();
-        int lx;
-        int ly;
-        if(this.getWidth() ==0){
-            ly = 600/largo;
-            lx = 600/largo;
-        }else{
-            lx = this.getWidth()/largo;
-            ly = this.getHeight()/largo;
-        }
+        int disx = 0;
+        int disy = 0;
+        int lx = (int) (this.getWidth()/largo);
+        int ly = (int) (this.getHeight()/largo);
+        System.out.print("\n");
         for (int i = 0; i < largo; i++) {
+        	disy = 0;
             for (int ii = 0; ii < largo; ii++) {
-                g2d.fillRoundRect(disx,disy,lx,ly,20,20);
-                if (tablero[i][ii]) {
+            	System.out.print(disx+"-"+disy+"."+ii+"-"+i+"/");
+                if (tablero[ii][i]) {
                     g2d.setColor(Color.CYAN);
                 }else{
                     g2d.setColor(Color.DARK_GRAY);
                 }
-                disx += lx;
+                g2d.fillRoundRect(disx,disy,lx,ly,20,20);
                 disy += ly;
             }
+            disx += lx;
         }
     }
 
@@ -73,33 +68,37 @@ public class PanelTablero extends JPanel implements MouseListener {
         largo = tablero.length;
         cantidades = new int[largo][largo];
         repaint();
+        System.out.print("dee");
     }
 
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+    	 System.out.print("dd");
+    	 int click_x = e.getX();
+         int click_y = e.getY();
+         int[] casilla = convertirCoordenadasACasilla(click_x, click_y);
+         
+         cantidades[casilla[0]][casilla[1]]++;
+         ventana.Jugar(casilla[0], casilla[1]);
+         repaint();
     }
 
     @Override
     public void mousePressed(MouseEvent e)
     {
-        int click_x = e.getX();
-        int click_y = e.getY();
-        int[] casilla = convertirCoordenadasACasilla(click_x, click_y);
-        cantidades[casilla[0]][casilla[1]]++;
-        ventana.Jugar(casilla[0], casilla[1]);
-        repaint();
+    	
     }
     private int[] convertirCoordenadasACasilla(int x, int y)
     {
         int ladoTablero = largo;
         int altoPanelTablero = getHeight();
         int anchoPanelTablero = getWidth();
-        int altoCasilla = altoPanelTablero / ladoTablero;
-        int anchoCasilla = anchoPanelTablero / ladoTablero;
-        int fila = (int) (y / altoCasilla);
-        int columna = (int) (x / anchoCasilla);
+        int fila = (int) ((y*ladoTablero) / (altoPanelTablero));
+        int columna = (int) ((x*ladoTablero) / (anchoPanelTablero));
+        System.out.print(fila);
+        System.out.print(columna);
+
         return new int[] { fila, columna };
     }
     @Override
