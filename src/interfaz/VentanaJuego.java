@@ -75,6 +75,7 @@ public class VentanaJuego extends JFrame {
 
 		if (tablero.tableroIluminado()) {
 			comprobarTop(puntaje);
+			nuevoJuego();
 		}
 	}
 

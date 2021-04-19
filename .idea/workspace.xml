@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c726cf44-b69c-48ee-bb84-8b5e669d8460" name="Default Changelist" comment="d">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/top10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/top10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flatlaf-1.0.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaz/PanelTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaz/PanelTablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaz/VentanaJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaz/VentanaJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller6b.iml" beforeDir="false" afterPath="$PROJECT_DIR$/taller6b.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,17 +57,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.VentanaJuego" />
@@ -78,6 +72,9 @@
       <option name="presentableId" value="Default" />
       <updated>1618803907231</updated>
       <workItem from="1618803908777" duration="4054000" />
+      <workItem from="1618855069762" duration="119000" />
+      <workItem from="1618855199061" duration="35000" />
+      <workItem from="1618855267889" duration="4029000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1618804478949</created>
@@ -130,6 +127,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="d" />
