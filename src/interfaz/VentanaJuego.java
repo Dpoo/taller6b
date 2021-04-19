@@ -68,7 +68,7 @@ public class VentanaJuego extends JFrame {
 
 	public void Jugar(int i, int j) {
 		tablero.jugar(i, j);
-		panelTablero.actulizarPanel(tablero);
+		panelTablero.actulizarPanel();
 		int conteo = tablero.darJugadas();
 		panelMarcador.setJugadas(conteo);
 		int puntaje = tablero.calcularPuntaje();
@@ -115,7 +115,7 @@ public class VentanaJuego extends JFrame {
 
 	public void reiniciarJuego() {
 		tablero.reiniciar();
-		panelTablero.actulizarPanel(tablero);
+		panelTablero.actulizarPanel();
 		panelMarcador.setJugadas(0);
 	}
 	

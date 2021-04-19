@@ -15,20 +15,22 @@ public class PanelTablero extends JPanel implements MouseListener {
     private boolean[][] tablero;
 
 
+
     public PanelTablero(VentanaJuego ventana){
         setSize(600,600);
         this.ventana = ventana;
         this.addMouseListener(this);
     }
 
-    public void nuevoPanel(Tablero tablero){
+    public void nuevoPanel(Tablero tableroC){
         this.removeAll();
-        boolean[][] tableroB = tablero.darTablero();
-        int largo = tableroB.length;
+        this.tablero = tableroC.darTablero();
+        this.largo = tablero.length;
         this.cantidades = new int[largo][largo];
         GridLayout gl = new GridLayout(largo,largo);
         setLayout(gl);
-        actulizarPanel(tablero);
+
+        actulizarPanel();
     }
 
     public void paint(Graphics g) {
@@ -57,12 +59,8 @@ public class PanelTablero extends JPanel implements MouseListener {
     }
 
 
-    public void actulizarPanel(Tablero tableroC){
-        tablero = tableroC.darTablero();
-        largo = tablero.length;
-        cantidades = new int[largo][largo];
+    public void actulizarPanel(){
         repaint();
-        System.out.print("dee");
     }
 
 
