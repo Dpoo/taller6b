@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import javax.swing.*;
 
-import com.formdev.flatlaf.FlatLightLaf;
+//import com.formdev.flatlaf.FlatLightLaf;
 
 import uniandes.dpoo.taller6.modelo.*;
 
@@ -103,7 +103,7 @@ public class VentanaJuego extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		FlatLightLaf.install();
+//		FlatLightLaf.install();
 		new VentanaJuego();
 	}
 
