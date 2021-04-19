@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import javax.swing.*;
 
-import com.formdev.flatlaf.FlatLightLaf;
+//import com.formdev.flatlaf.FlatLightLaf;
 
 import uniandes.dpoo.taller6.modelo.*;
 
@@ -29,7 +29,7 @@ public class VentanaJuego extends JFrame {
 	public VentanaJuego() {
 		tablero = new Tablero(5);
 		top = new Top10();
-		top.cargarRecords(new File("data/top10.csv"));
+		top.cargarRecords(new File("./data/top10.csv"));
 		setTitle("LightsOut");
 		setSize(700, 700);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,7 +58,7 @@ public class VentanaJuego extends JFrame {
 			public void windowClosing(WindowEvent e)
 			{
 				try {
-					top.salvarRecords(new File("data/top10.csv"));
+					top.salvarRecords(new File("./data/top10.csv"));
 				} catch (FileNotFoundException | UnsupportedEncodingException fileNotFoundException) {
 					fileNotFoundException.printStackTrace();
 				}
@@ -103,7 +103,7 @@ public class VentanaJuego extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		FlatLightLaf.install();
+//		FlatLightLaf.install();
 		new VentanaJuego();
 	}
 
