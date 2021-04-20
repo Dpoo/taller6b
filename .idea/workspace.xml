@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c726cf44-b69c-48ee-bb84-8b5e669d8460" name="Default Changelist" comment="pulicion">
+    <list default="true" id="c726cf44-b69c-48ee-bb84-8b5e669d8460" name="Default Changelist" comment="conteo cantidad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/top10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/top10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaz/PanelTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaz/PanelTablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.VentanaJuego" />
@@ -71,7 +81,8 @@
       <workItem from="1618855199061" duration="35000" />
       <workItem from="1618855267889" duration="4029000" />
       <workItem from="1618859379089" duration="2911000" />
-      <workItem from="1618874317526" duration="6318000" />
+      <workItem from="1618874317526" duration="6356000" />
+      <workItem from="1618890739555" duration="1499000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1618804478949</created>
@@ -122,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618871708923</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="conteo cantidad">
+      <created>1618880723599</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1618880723599</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +161,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="d" />
     <MESSAGE value="pulicion" />
-    <option name="LAST_COMMIT_MESSAGE" value="pulicion" />
+    <MESSAGE value="conteo cantidad" />
+    <option name="LAST_COMMIT_MESSAGE" value="conteo cantidad" />
   </component>
 </project>
