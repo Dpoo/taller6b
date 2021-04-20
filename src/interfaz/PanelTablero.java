@@ -36,7 +36,6 @@ public class PanelTablero extends JPanel implements MouseListener {
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
-
         int la = Math.min(this.getWidth()/largo, this.getHeight()/largo);
         int sdisx = (getWidth()-la*largo)/2;
         int disy = (getHeight()-la*largo)/2;
@@ -44,14 +43,20 @@ public class PanelTablero extends JPanel implements MouseListener {
         	int disx = sdisx;
             for (int ii = 0; ii < largo; ii++) {
                 GradientPaint gp;
+                Color colorT;
                 if (tablero[i][ii]) {
-                    gp = new GradientPaint(disx, disy, Color.CYAN, disx + la, disy + la, Color.WHITE);
-
+                    gp = new GradientPaint(disx, disy, new java.awt.Color(113, 164, 201), disx + la, disy + la, Color.WHITE);
+                    colorT = Color.BLACK;
                 }else{
-                    gp = new GradientPaint(disx, disy, Color.GRAY, disx + la, disy + la, Color.BLACK);
+                    gp = new GradientPaint(disx, disy, Color.GRAY, disx + la, disy + la, new java.awt.Color(25, 40, 50));
+                    colorT = Color.green;
                 }
+
                 g2d.setPaint(gp);
                 g2d.fillRoundRect(disx,disy,la,la,20,20);
+                g2d.setColor(colorT);
+                g2d.drawString(String.valueOf(cantidades[i][ii]),disx +(int)(la*0.1),disy+(int)(la*0.1));
+
                 disx += la;
             }
             disy += la;
@@ -66,7 +71,6 @@ public class PanelTablero extends JPanel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-    	 System.out.print("dd");
     	 int click_x = e.getX();
          int click_y = e.getY();
          int[] casilla = convertirCoordenadasACasilla(click_x, click_y);
